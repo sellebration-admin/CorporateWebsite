@@ -1,6 +1,5 @@
 import React from "react";
 import "./Header.css";
-import Navbar from "../Navbar/Navbar";
 import { sortIcon, logo, search } from "./../../assets/index";
 import LanguagesMap from "../LanguagesMap/LanguagesMap";
 const Header = () => {

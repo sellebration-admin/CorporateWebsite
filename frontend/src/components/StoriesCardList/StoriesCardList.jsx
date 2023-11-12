@@ -1,6 +1,7 @@
 import React from "react";
 import StoriesCard from "../StoriesCard/StoriesCard";
 import data from "../../data/stories.json";
+import "./StoriesCardList.css";
 
 const StoriesCardList = ({ activeTab }) => {
   const tabs = [
@@ -16,7 +17,7 @@ const StoriesCardList = ({ activeTab }) => {
       : data.filter((story) => story.tag === tabs[activeTab].label);
 
   return (
-    <div>
+    <div className="cards-list">
       {filteredStories.slice(0, 3).map((story, index) => (
         <StoriesCard key={index} story={story} />
       ))}

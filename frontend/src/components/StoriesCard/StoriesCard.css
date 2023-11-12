@@ -7,7 +7,6 @@
 }
 
 .image-container {
-
   overflow: hidden;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -24,19 +23,25 @@
 }
 
 .header {
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-weight: 600;
   color: #fff;
+
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 150% */
+  text-transform: capitalize;
 }
 
 .text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-height: 150px;
-  color: #ffffffc4;
+  color: rgba(255, 255, 255, 0.77);
+
+  font-family: Montserrat;
   font-size: 18px;
+  font-style: normal;
   font-weight: 500;
+  line-height: 28px; /* 155.556% */
+  text-transform: capitalize;
 }
 
 .read-more-link {

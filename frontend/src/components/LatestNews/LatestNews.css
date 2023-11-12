@@ -1,0 +1,18 @@
+.news-container {
+  padding: 0px 123px 81px 81px;
+}
+
+.news-container h1 {
+  color: var(--h1-dark-blue);
+  font-size: 36px;
+}
+
+.tabs-component {
+  padding-left: 81px;
+}
+
+.content-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

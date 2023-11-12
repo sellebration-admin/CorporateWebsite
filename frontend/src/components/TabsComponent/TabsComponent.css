@@ -1,10 +1,10 @@
 .tabs-container {
   font-family: Arial, sans-serif;
+  padding-bottom: 164px;
 }
 
 .tab-buttons {
   display: flex;
-  padding: 10px;
 }
 
 button {
@@ -15,6 +15,7 @@ button {
   font-weight: 600;
   margin-right: 107px;
   position: relative;
+  padding-bottom: 29px;
 }
 
 button.active {
@@ -28,10 +29,11 @@ button.active {
   border-radius: 30px;
   font-size: 16px;
   padding: 10px 20px;
-  margin-left: 107px;
   cursor: pointer;
+  width: 188px;
+  height: 43px;
 }
 
 .tab-content {
-  padding: 20px;
+  padding-top: 30px;
 }

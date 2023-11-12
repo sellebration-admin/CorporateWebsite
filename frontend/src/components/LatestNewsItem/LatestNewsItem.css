@@ -1,0 +1,30 @@
+.latest-news-container {
+  width: 470px;
+  height: 171px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 84px;
+}
+
+.news-title h3 {
+  color: #374e91;
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+}
+
+.news-text p {
+  color: rgba(0, 0, 0, 0.77);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.9px;
+  text-transform: capitalize;
+}

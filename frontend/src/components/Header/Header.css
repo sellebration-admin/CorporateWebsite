@@ -42,7 +42,7 @@ button[type="submit"] {
   background: transparent;
   border: none;
   top: 15px;
-  right: 15px;
+  right: -75px;
 }
 
 button[type="submit"]:hover {

@@ -1,0 +1,9 @@
+.social-content-columns {
+  display: flex;
+  flex-direction: row;
+  padding-left: 83px;
+}
+
+.social-media-news {
+  padding-top: 83px;
+}

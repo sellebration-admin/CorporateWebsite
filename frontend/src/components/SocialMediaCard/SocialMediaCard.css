@@ -1,0 +1,43 @@
+.social-media-card {
+  width: 610px;
+  height: 465px;
+  background: #2f528e;
+  overflow: hidden;
+}
+
+.social-media-container {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+.social-media-card img {
+  object-fit: cover;
+  width: 524px;
+  height: 252px;
+  padding: 15px;
+}
+
+.social-media-title {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding-left: 18px;
+}
+
+.social-media-text {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; 
+  letter-spacing: 0.9px;
+  text-transform: capitalize;
+  width: 437px;
+  padding-left: 18px;
+}
+
