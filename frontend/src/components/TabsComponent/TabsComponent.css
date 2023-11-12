@@ -1,0 +1,37 @@
+.tabs-container {
+  font-family: Arial, sans-serif;
+}
+
+.tab-buttons {
+  display: flex;
+  padding: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 600;
+  margin-right: 107px;
+  position: relative;
+}
+
+button.active {
+  border-bottom: 3px solid #ed7f09;
+}
+
+.view-all-button {
+  background: #0ab1ee;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-left: 107px;
+  cursor: pointer;
+}
+
+.tab-content {
+  padding: 20px;
+}

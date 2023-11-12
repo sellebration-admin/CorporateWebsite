@@ -1,0 +1,13 @@
+.language-map {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-weight: 500;
+  color: white;
+}
+
+.heading {
+  margin: 0 auto;
+}

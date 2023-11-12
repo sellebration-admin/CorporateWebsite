@@ -1,0 +1,12 @@
+.stories-container {
+  padding: 86px 123px 81px 81px;
+}
+
+.stories-container h1 {
+  color: var(--h1-dark-blue);
+  font-size: 36px;
+}
+
+.tabs-component {
+  padding-left: 81px;
+}

@@ -1,0 +1,25 @@
+:root {
+  --button-light-blue: #0ab1ee;
+  --stories-background-dark-blue: #2f528e;
+  --h1-dark-blue: #2f528e;
+  --h3-dark-blue: #374e91;
+  --search-placeholder: #30538d;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.wrapper {
+  max-width: 1024;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}

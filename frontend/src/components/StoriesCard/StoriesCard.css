@@ -1,0 +1,48 @@
+.box {
+  height: 627px;
+  width: 378px;
+  position: relative;
+  background-color: #2f528e;
+  border-radius: 30px;
+}
+
+.image-container {
+
+  overflow: hidden;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.story-image {
+  width: 378px;
+  height: 176px;
+  object-fit: cover;
+}
+
+.text-container {
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 150px;
+  color: #ffffffc4;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.read-more-link {
+  display: block;
+  margin-top: 10px;
+  color: #2f528e;
+  text-decoration: none;
+  font-weight: bold;
+}
