@@ -23,3 +23,13 @@ body {
 a {
   text-decoration: none;
 }
+
+html {
+  max-width: 100%;
+}
+
+body:not(header):not(footer) {
+  max-width: 100%;
+  margin: 0 auto;
+}
+

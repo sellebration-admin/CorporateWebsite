@@ -1,13 +1,14 @@
 import React from "react";
 import "./SocialMedia.css";
-import YoutubeVideoContainer from "../YouTubeVideoContainer/YoutubeVideoContainer";
-import SocialMediaCard from "../SocialMediaCard/SocialMediaCard";
+import SocialMediaCardForTwitter from "../SocialMediaCard/SocialMediaCardForTwitter";
+import SocialMediaCardForLinkedIn from "../SocialMediaCard/SocialMediaCardForLinkedIn";
 
 const SocialMedia = () => {
   return (
     <div className="social-media-news">
       <div className="social-content-columns">
-        <SocialMediaCard />
+        <SocialMediaCardForTwitter />
+        <SocialMediaCardForLinkedIn />
       </div>
     </div>
   );

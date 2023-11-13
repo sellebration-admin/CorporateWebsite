@@ -5,6 +5,7 @@ header {
 
 header .wrapper {
   position: relative;
+  width: 80%;
 }
 
 header .container {

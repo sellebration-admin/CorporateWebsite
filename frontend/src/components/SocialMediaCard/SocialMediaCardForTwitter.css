@@ -1,0 +1,83 @@
+.big-container {
+  position: relative;
+}
+
+.social-media-card {
+  width: 610px;
+  height: 465px;
+  background: #2f528e;
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+}
+
+.social-media-icon-container {
+  position: absolute;
+  z-index: 2;
+  top: -30px;
+  left: 15px;
+}
+.social-icon {
+  border-radius: 30px;
+  width: 36px;
+  height: 36px;
+}
+
+.social-media-container::-webkit-scrollbar {
+  width: 8px;
+  padding: 20px;
+}
+
+.social-media-container::-webkit-scrollbar-track {
+  background-image: url("https://i.imgur.com/GvV1R30.png");
+  background-repeat: repeat-y;
+  background-size: contain;
+}
+
+.social-media-container::-webkit-scrollbar-thumb {
+  width: 16px;
+  height: 148px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #0ab1ee;
+}
+
+.social-media-container {
+  height: 440px;
+  width: 550px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 10px;
+  position: relative;
+}
+.social-media-card img {
+  object-fit: cover;
+  width: 524px;
+  height: 252px;
+  padding: 15px;
+}
+
+.social-media-title {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding-left: 18px;
+}
+
+.social-media-text {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.9px;
+  text-transform: capitalize;
+  width: 437px;
+  padding-left: 18px;
+}
