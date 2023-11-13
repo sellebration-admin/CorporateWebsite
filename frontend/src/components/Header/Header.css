@@ -1,15 +1,21 @@
 header {
   min-height: 100vh;
   background: linear-gradient(180deg, #ebf0ff 0%, #5874a6 0.01%, #2f528e 100%);
+  margin-bottom: 100px;
 }
 
 header .wrapper {
-  position: relative;
-  width: 80%;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  background: linear-gradient(180deg, #ebf0ff 0%, #5874a6 0.01%);
 }
 
 header .container {
-  padding-top: 59px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-left: 121px;
   padding-right: 140px;
   display: flex;
@@ -18,18 +24,20 @@ header .container {
 }
 .right-column {
   display: flex;
+  line-height: 40px;
 }
 form {
   display: flex;
   border-radius: 30px;
   position: relative;
   width: 355px;
+  height: 40px;
   border-radius: 30px;
   background-color: white;
 }
 .search-input {
-  line-height: 40px;
   width: 290px;
+  height: 40px;
   border-radius: 30px;
   border: none;
   text-indent: 39px;
@@ -42,7 +50,7 @@ button[type="submit"] {
   position: absolute;
   background: transparent;
   border: none;
-  top: 15px;
+  top: 7px;
   right: -75px;
 }
 
@@ -60,10 +68,11 @@ button[type="submit"]:hover {
 }
 .sort-logo {
   margin-right: 39px;
+  width: 36px;
 }
 
 .logo-image {
-  width: 164px;
-  height: 140px;
+  width: 144px;
+  height: 144px;
   background-color: white;
 }
