@@ -39,7 +39,7 @@ const LanguageChoosingPage = () => {
   return (
     <div className="language-choosing-page">
       <div className="language-choosing-page-container">
-        <div className="logo">
+        <div className="first-logo">
           <div className="logo-image-container">
             <img src={logotransp} alt="logo" />
           </div>
