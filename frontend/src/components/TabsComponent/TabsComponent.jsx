@@ -28,9 +28,11 @@ const TabsComponent = () => {
             {tab.label}
           </button>
         ))}
-        <button className="view-all-button" onClick={() => setActiveTab(0)}>
-          View All
-        </button>
+        <div className="view-all-button-div">
+          <button className="view-all-button" onClick={() => setActiveTab(0)}>
+            View All
+          </button>
+        </div>
       </div>
       <div className="tab-content">{tabs[activeTab].content}</div>
     </div>

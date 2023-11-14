@@ -33,7 +33,7 @@
   text-transform: capitalize;
 }
 
-.text {
+.text-container p {
   color: rgba(255, 255, 255, 0.77);
 
   font-family: Montserrat;

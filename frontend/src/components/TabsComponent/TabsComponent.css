@@ -7,7 +7,7 @@
   display: flex;
 }
 
-button {
+.tab-buttons button {
   background: none;
   border: none;
   cursor: pointer;
@@ -18,11 +18,11 @@ button {
   padding-bottom: 29px;
 }
 
-button.active {
+.tab-buttons button.active {
   border-bottom: 3px solid #ed7f09;
 }
 
-.view-all-button {
+.view-all-button-div button {
   background: #0ab1ee;
   color: white;
   border: none;

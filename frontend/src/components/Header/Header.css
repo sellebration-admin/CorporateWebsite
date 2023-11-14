@@ -25,7 +25,7 @@ header .container {
   display: flex;
   line-height: 40px;
 }
-form {
+.right-column form {
   display: flex;
   border-radius: 30px;
   position: relative;
@@ -45,12 +45,12 @@ form {
   overflow: hidden;
 }
 
-button[type="submit"] {
+.right-column button[type="submit"] {
   position: absolute;
   background: transparent;
   border: none;
   top: 7px;
-  right: -75px;
+  right: 15px;
 }
 
 button[type="submit"]:hover {
@@ -76,7 +76,7 @@ button[type="submit"]:hover {
   background-color: white;
 }
 
-.right-column select {
+.selectdiv select {
   appearance: none;
   background-color: transparent;
   border: none;
@@ -85,12 +85,11 @@ button[type="submit"]:hover {
 
   cursor: pointer;
 
-  border: 1px solid white;
+  border: 1.5px solid white;
   border-radius: 30px;
   color: white;
   margin-left: 15px;
-
-  padding: 0px 22px;
+  padding: 10px 22px;
 }
 
 .right-column select:focus {
