@@ -1,7 +1,6 @@
 import React from "react";
 import "./Header.css";
 import { sortIcon, logo, search } from "./../../assets/index";
-import LanguagesMap from "../LanguagesMap/LanguagesMap";
 const Header = () => {
   return (
     <header>
@@ -24,10 +23,24 @@ const Header = () => {
                 <img src={search} alt="search" />
               </button>
             </form>
+            <div className="selectdiv">
+              <select>
+                <option value="English" selected>
+                  English
+                </option>
+                <option value="हिन्दी">हिन्दी</option>
+                <option value="deutsch">Deutsch</option>
+                <option value="français">Français</option>
+                <option value="русский">Русский</option>
+                <option value="Português">Português</option>
+                <option value="中国人">中国人</option>
+                <option value="español">Español</option>
+                <option value="日本">日本</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
-      <LanguagesMap />
     </header>
   );
 };

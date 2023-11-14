@@ -1,5 +1,4 @@
 header {
-  min-height: 100vh;
   background: linear-gradient(180deg, #ebf0ff 0%, #5874a6 0.01%, #2f528e 100%);
   margin-bottom: 100px;
 }
@@ -7,10 +6,10 @@ header {
 header .wrapper {
   margin: 0 auto;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   top: 0px;
-  background: linear-gradient(180deg, #ebf0ff 0%, #5874a6 0.01%);
+  background: linear-gradient(180deg, #ebf0ff 0%, #5a75a6 0.01%);
 }
 
 header .container {
@@ -72,7 +71,61 @@ button[type="submit"]:hover {
 }
 
 .logo-image {
-  width: 144px;
-  height: 144px;
+  width: 70px;
+  height: 70px;
   background-color: white;
+}
+
+.right-column select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+
+  width: 100%;
+
+  cursor: pointer;
+
+  border: 1px solid white;
+  border-radius: 30px;
+  color: white;
+  margin-left: 15px;
+
+  padding: 0px 22px;
+}
+
+.right-column select:focus {
+  outline: none;
+}
+
+.right-column select:placeholder-shown {
+  padding: 10px;
+}
+
+.right-column select option {
+  background-color: white;
+  color: black;
+}
+
+.selectdiv {
+  position: relative;
+  min-width: 200px;
+}
+
+.selectdiv select::-ms-expand {
+  display: none;
+}
+
+.selectdiv:after {
+  content: ">";
+  font: 17px "Consolas", monospace;
+  color: #ffffff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 11px;
+  top: 10px;
+  padding: 0 0 2px;
+  position: absolute;
+  pointer-events: none;
 }

@@ -1,8 +1,9 @@
 .language-map {
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
-  width: 80%;
   margin: 0 auto;
+  background: linear-gradient(180deg, #ebf0ff 0%, #5c77a7 0.01%, #2f528e 100%);
 }
 
 h1 {

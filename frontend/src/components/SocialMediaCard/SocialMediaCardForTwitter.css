@@ -21,6 +21,7 @@
   border-radius: 30px;
   width: 36px;
   height: 36px;
+  border: 5px solid white;
 }
 
 .social-media-container::-webkit-scrollbar {

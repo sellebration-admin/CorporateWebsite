@@ -1,5 +1,6 @@
 import map from "./image.png";
 import logo from "./logofor.png";
+import logotransp from "./logo.png";
 import sortIcon from "./Sort.svg";
 import search from "./search.png";
 import news from "./news.jpg";
@@ -23,4 +24,5 @@ export {
   instagramFooter,
   facebookFooter,
   youtubeFooter,
+  logotransp,
 };
