@@ -11,7 +11,10 @@ const LatestNewsList = () => {
         <LatestNewsItem news={item} key={index} />
       ))}
       {news.length > maxItemsToShow && (
-        <button className="view-all-button" onClick={() => setActiveTab(0)}>
+        <button
+          className="news-view-all-button"
+          onClick={() => setActiveTab(0)}
+        >
           View All
         </button>
       )}

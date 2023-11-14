@@ -1,8 +1,7 @@
 .latest-news-list .view-all-button {
-  margin-left: 84px;
 }
 
-.latest-news-list button{
+.latest-news-list button {
   background: #0ab1ee;
   color: white;
   border: none;
@@ -14,8 +13,11 @@
   font-weight: 600;
   line-height: 20px;
   text-transform: capitalize;
-  width: 188px;
+  width: auto;
+  padding-left: 15px;
+  padding-right: 15px;
   height: 43px;
   flex-shrink: 0;
-  margin: 24px 24px 24px;
+  margin-top: 10px;
 }
+

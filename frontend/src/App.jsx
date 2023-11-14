@@ -8,9 +8,7 @@ const App = () => {
   const Layout = () => {
     return (
       <div className="app">
-
         <Outlet />
-
       </div>
     );
   };
@@ -21,11 +19,11 @@ const App = () => {
       children: [
         {
           path: "/",
-          element: <HomePage />,
+          element: <LanguageChoosingPage />,
         },
         {
-          path: "/welcome",
-          element: <LanguageChoosingPage />,
+          path: "/index",
+          element: <HomePage />,
         },
       ],
     },

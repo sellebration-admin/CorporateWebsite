@@ -1,10 +1,16 @@
 .our-stories {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 20px;
 }
 
 .stories-container {
-  padding: 46px 13px 30px 81px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .stories-container h1 {
@@ -12,6 +18,28 @@
   font-size: 36px;
 }
 
-.tabs-component {
-  padding-left: 81px;
+@media only screen and (max-width: 415px) {
+  .tabs-component {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .our-stories {
+    width: 100%;
+  }
+  .stories-container {
+    padding: 15px;
+  }
+
+  .stories-container h1 {
+    text-align: left;
+    margin: 0;
+  }
 }

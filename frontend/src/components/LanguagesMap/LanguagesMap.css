@@ -14,3 +14,9 @@ h1 {
 .heading {
   margin: 0 auto;
 }
+
+@media only screen and (max-width: 767px) {
+  .language-map {
+    display: none;
+  }
+}

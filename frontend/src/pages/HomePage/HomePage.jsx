@@ -5,7 +5,6 @@ import SocialMedia from "../../components/SocialMedia/SocialMedia";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import LanguagesMap from "../../components/LanguagesMap/LanguagesMap";
-
 const HomePage = () => {
   return (
     <>

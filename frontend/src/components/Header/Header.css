@@ -4,6 +4,7 @@ header {
 }
 
 header .wrapper {
+  min-width: 1148px;
   margin: 0 auto;
   width: 100%;
   z-index: 3;
@@ -127,4 +128,38 @@ button[type="submit"]:hover {
   padding: 0 0 2px;
   position: absolute;
   pointer-events: none;
+}
+
+@media only screen and (max-width: 415px) {
+  header .wrapper {
+    min-width: 295px;
+    max-width: 415px;
+  }
+
+  header .container {
+    min-width: 295px;
+    max-width: 391px;
+    gap: 80%;
+    padding-left: 10px;
+  }
+
+  header .left-column {
+    padding-left: 0;
+  }
+  header .right-column {
+    padding-right: 0px;
+  }
+
+  .logo-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .right-column form {
+    display: none;
+  }
+
+  .selectdiv {
+    display: none;
+  }
 }

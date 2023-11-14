@@ -48,7 +48,7 @@
   width: 550px;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-top: 10px;
+
   position: relative;
 }
 .social-media-card img {
@@ -81,4 +81,43 @@
   text-transform: capitalize;
   width: 437px;
   padding-left: 18px;
+}
+
+@media only screen and (max-width: 415px) {
+  .social-media-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 5px;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .social-media-container {
+    height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 5px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .social-media-card img {
+    width: 100%;
+
+    padding-left: 0px;
+  }
+
+  .social-media-title,
+  .social-media-text {
+    width: 90%;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+  }
+  .social-media-icon-container {
+    position: absolute;
+    z-index: 1;
+    top: -25px;
+    left: 15px;
+  }
 }

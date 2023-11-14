@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./LanguageChoosingPage.css";
 import { logotransp } from "../../assets";
 const LanguageChoosingPage = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("English");
-
+  const navigate = useNavigate();
   const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);
   };
@@ -34,7 +35,7 @@ const LanguageChoosingPage = () => {
   };
 
   const handleProceed = () => {
-    console.log(`Selected Language: ${selectedLanguage}`);
+    navigate("/index");
   };
   return (
     <div className="language-choosing-page">
@@ -89,28 +90,29 @@ const LanguageChoosingPage = () => {
         </div>
         <div className="language-selector">
           <div className="selector-container">
-          <select
-            name="languages"
-            id="languages"
-            value={selectedLanguage}
-            onChange={handleLanguageChange}
-          >
-            <option value="English">English</option>
-            <option value="हिन्दी">हिन्दी</option>
-            <option value="deutsch">Deutsch</option>
-            <option value="français">Français</option>
-            <option value="русский">Русский</option>
-            <option value="Português">Português</option>
-            <option value="中国人">中国人</option>
-            <option value="español">Español</option>
-            <option value="日本">日本</option>
-          </select>
-          <br />
+            <select
+              name="languages"
+              id="languages"
+              value={selectedLanguage}
+              onChange={handleLanguageChange}
+            >
+              <option value="English">English</option>
+              <option value="हिन्दी">हिन्दी</option>
+              <option value="deutsch">Deutsch</option>
+              <option value="français">Français</option>
+              <option value="русский">Русский</option>
+              <option value="Português">Português</option>
+              <option value="中国人">中国人</option>
+              <option value="español">Español</option>
+              <option value="日本">日本</option>
+            </select>
             <br />
-            </div>
+            <br />
+          </div>
           <div className="button-div">
-          <button onClick={handleProceed}>{getButtonText()}</button>
-        </div></div>
+            <button onClick={handleProceed}>{getButtonText()}</button>
+          </div>
+        </div>
       </div>
     </div>
   );

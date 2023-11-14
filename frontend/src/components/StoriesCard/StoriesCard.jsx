@@ -5,7 +5,7 @@ const StoriesCard = ({ story }) => {
   const { image, header, text, link } = story;
 
   return (
-    <div className="box">
+    <div className="stories-box">
       <div className="image-container">
         <img src={image} alt={header} className="story-image" />
       </div>

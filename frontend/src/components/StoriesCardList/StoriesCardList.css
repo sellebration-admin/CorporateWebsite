@@ -1,4 +1,17 @@
 .cards-list {
   display: flex;
-  gap: 68px; 
+  gap: 68px;
+}
+
+@media only screen and (max-width: 415px) {
+  .cards-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0;
+  }
+
+  .cards-list > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }

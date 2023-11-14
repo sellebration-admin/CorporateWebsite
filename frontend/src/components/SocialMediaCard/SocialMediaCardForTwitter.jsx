@@ -13,7 +13,7 @@ const SocialMediaCardForTwitter = () => {
             <img
               src="https://bigthink.com/wp-content/uploads/2022/03/AdobeStock_389328016_Editorial_Use_Only.jpeg"
               alt="social media image"
-              className="social-madia-image"
+              className="social-media-image"
             />
           </div>
           <div className="social-media-title">Title</div>
