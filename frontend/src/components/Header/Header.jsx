@@ -1,15 +1,18 @@
 import React from "react";
 import "./Header.css";
 import { sortIcon, logo, search } from "./../../assets/index";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header>
       <div className="wrapper">
         <div className="container">
           <div className="left-column">
-            <div className="logo">
-              <img src={logo} alt="logo" className="logo-image" />
-            </div>
+            <Link to="/index">
+              <div className="logo">
+                <img src={logo} alt="logo" className="logo-image" />
+              </div>
+            </Link>
           </div>
           <div className="right-column">
             <img src={sortIcon} alt="sort" className="sort-logo" />

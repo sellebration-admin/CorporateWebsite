@@ -1,0 +1,8 @@
+.single {
+  display: flex;
+  gap: 50px;
+}
+
+.single .content {
+  flex: 5;
+}
