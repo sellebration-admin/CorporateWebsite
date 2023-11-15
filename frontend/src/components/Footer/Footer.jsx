@@ -29,19 +29,24 @@ const Footer = () => {
           <div className="first-line-social-icons">
             <ul>
               <li>
-                <img src={twitterFooter} />
+                <a href="https://twitter.com/SellebrationLtd">
+                  <img src={twitterFooter} alt="X (ex Twitter)" />
+                </a>
               </li>
               <li>
-                <img src={linkedinFooter} />
+                <a href="https://www.linkedin.com/company/sellebration-private-limited">
+                  <img src={linkedinFooter} alt="LinkedIn" />
+                </a>
               </li>
               <li>
-                <img src={instagramFooter} />
+                <a href="https://www.instagram.com/sellebrationltd/">
+                  <img src={instagramFooter} alt="Instagram" />
+                </a>
               </li>
               <li>
-                <img src={facebookFooter} />
-              </li>
-              <li>
-                <img src={youtubeFooter} />
+                <a href="https://www.facebook.com/SellebrationLtd">
+                  <img src={facebookFooter} alt="Facebook" />
+                </a>
               </li>
             </ul>
           </div>

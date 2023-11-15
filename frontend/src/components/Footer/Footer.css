@@ -65,6 +65,10 @@ footer {
 .first-line-social-icons {
   display: flex;
 }
+.first-line-social-icons img{
+  width: 26px;
+  height: 26px;
+}
 .first-line-social-icons ul {
   list-style-type: none;
   display: flex;

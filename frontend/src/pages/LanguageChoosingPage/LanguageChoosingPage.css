@@ -8,17 +8,14 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  padding-top: 100px;
-
-  background-image: url("../../assets/image.png");
-  background-position: 50% 80%;
-  background-repeat: no-repeat;
-  background-size: 504px 306px;
-  position: relative;
+  padding-top: 20px;
 }
 .first-logo {
   display: flex;
   align-items: center;
+}
+.logo-image-container {
+  width: 50%;
 }
 .text {
   color: black;
@@ -67,7 +64,7 @@
 }
 
 .language-selector {
-  padding-top: 100px;
+  padding-top: 50px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -147,10 +144,20 @@
   transition: background-color 0.3s ease-in-out;
 }
 
+.background-map-holder {
+  width: 100vh;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../assets/image.png");
+  background-position: 50% 80%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
 
-
-/* For mobile phones */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 415px) {
   .language-choosing-page {
     background-size: cover;
   }
@@ -160,9 +167,16 @@
     background-size: 100% auto;
     background-position: 50% 55%;
   }
+  .background-map-holder {
+    width: 100%;
+    max-width: 300px; 
+    height: 200px; 
+    margin-top: 20px; 
+    background-size: cover; 
+  }
 
   .first-logo img {
-    width: 129px;
+    width: 299px;
   }
 
   .marquee {
@@ -195,7 +209,7 @@
 /* For tablets */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
   .language-choosing-page-container {
-    padding-top: 80px;
+    padding-top: 40px;
     background-size: 90% auto;
     background-position: 60% 40%;
   }
@@ -223,5 +237,24 @@
   .button-div button {
     width: 150px;
     font-size: 16px;
+  }
+
+  .background-map-holder {
+    width: 10vh;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets/image.png");
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+  }
+
+  .background-map-holder {
+    align-items: flex-start;
+    justify-self: start;
+    justify-content: flex-start;
   }
 }

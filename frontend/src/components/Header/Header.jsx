@@ -9,14 +9,14 @@ const Header = () => {
         <div className="container">
           <div className="left-column">
             <Link to="/index">
-              <div className="logo">
+              <div className="header-logo">
                 <img src={logo} alt="logo" className="logo-image" />
               </div>
             </Link>
           </div>
           <div className="right-column">
             <img src={sortIcon} alt="sort" className="sort-logo" />
-            <form>
+            <form className="search-form">
               <input
                 type="text"
                 className="search-input"

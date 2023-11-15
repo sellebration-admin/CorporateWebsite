@@ -44,11 +44,6 @@ const LanguageChoosingPage = () => {
           <div className="logo-image-container">
             <img src={logotransp} alt="logo" />
           </div>
-          <div className="light-blue-line"></div>
-          <div className="dark-blue-line"></div>
-          <div className="text">
-            <p>SELLEBRATION PVT. LTD. (HeadOffice :Patalia)</p>
-          </div>
         </div>
         <div className="marquee">
           <marquee
@@ -88,6 +83,7 @@ const LanguageChoosingPage = () => {
             </div>
           </marquee>
         </div>
+        <div className="background-map-holder">
         <div className="language-selector">
           <div className="selector-container">
             <select
@@ -112,7 +108,8 @@ const LanguageChoosingPage = () => {
           <div className="button-div">
             <button onClick={handleProceed}>{getButtonText()}</button>
           </div>
-        </div>
+          </div>
+          </div>
       </div>
     </div>
   );

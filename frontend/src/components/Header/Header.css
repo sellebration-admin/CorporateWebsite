@@ -1,9 +1,10 @@
 header {
   background: linear-gradient(180deg, #ebf0ff 0%, #5874a6 0.01%, #2f528e 100%);
-  margin-bottom: 100px;
 }
 
 header .wrapper {
+  display: flex;
+  justify-content: center;
   min-width: 1148px;
   margin: 0 auto;
   width: 100%;
@@ -14,44 +15,45 @@ header .wrapper {
 }
 
 header .container {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 121px;
-  padding-right: 140px;
   display: flex;
-  justify-content: space-between;
+  width: 90%;
   align-items: center;
+  justify-content: space-between;
 }
 .right-column {
   display: flex;
-  line-height: 40px;
+  line-height: 30px;
 }
 .right-column form {
   display: flex;
   border-radius: 30px;
   position: relative;
-  width: 355px;
-  height: 40px;
+  width: 255px;
+  height: 30px;
   border-radius: 30px;
   background-color: white;
 }
 .search-input {
-  width: 290px;
-  height: 40px;
+  width: 195px;
   border-radius: 30px;
   border: none;
   text-indent: 39px;
-  font-size: 20px;
+  font-size: 16px;
   color: var(--search-placeholder);
   overflow: hidden;
+  height: 30px;
 }
 
 .right-column button[type="submit"] {
   position: absolute;
   background: transparent;
   border: none;
-  top: 7px;
-  right: 15px;
+  top: 4px;
+  right: 25px;
+}
+.search-form img {
+  width: 20px;
+  height: 20px;
 }
 
 button[type="submit"]:hover {
@@ -59,38 +61,41 @@ button[type="submit"]:hover {
 }
 .search-input::placeholder {
   color: var(--search-placeholder);
-  font-weight: 500;
-  font-size: 20px;
-  padding: 10px 0px 10px;
+  font-weight: 400;
+  font-size: 16px;
 }
 .search-input:focus {
   outline: none;
 }
 .sort-logo {
   margin-right: 39px;
-  width: 36px;
+  width: 26px;
+  height: 26px;
 }
 
-.logo-image {
+.header-logo {
   width: 70px;
   height: 70px;
-  background-color: white;
+}
+.logo-image {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  padding: 10px;
 }
 
 .selectdiv select {
   appearance: none;
   background-color: transparent;
   border: none;
-
   width: 100%;
-
+  height: 30px;
   cursor: pointer;
-
   border: 1.5px solid white;
   border-radius: 30px;
   color: white;
   margin-left: 15px;
-  padding: 10px 22px;
+  padding-left: 15px;
 }
 
 .right-column select:focus {
@@ -98,7 +103,6 @@ button[type="submit"]:hover {
 }
 
 .right-column select:placeholder-shown {
-  padding: 10px;
 }
 
 .right-column select option {
@@ -108,7 +112,7 @@ button[type="submit"]:hover {
 
 .selectdiv {
   position: relative;
-  min-width: 200px;
+  min-width: 150px;
 }
 
 .selectdiv select::-ms-expand {
@@ -124,7 +128,7 @@ button[type="submit"]:hover {
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   right: 11px;
-  top: 10px;
+  top: 5px;
   padding: 0 0 2px;
   position: absolute;
   pointer-events: none;
@@ -132,27 +136,16 @@ button[type="submit"]:hover {
 
 @media only screen and (max-width: 415px) {
   header .wrapper {
-    min-width: 295px;
-    max-width: 415px;
+    width: 100%;
   }
 
   header .container {
-    min-width: 295px;
-    max-width: 391px;
-    gap: 80%;
-    padding-left: 10px;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 20%;
   }
-
-  header .left-column {
-    padding-left: 0;
-  }
-  header .right-column {
-    padding-right: 0px;
-  }
-
   .logo-image {
-    width: 70px;
-    height: 70px;
+    padding: 3px;
   }
 
   .right-column form {
