@@ -1,0 +1,113 @@
+/* AllPostsModule.css */
+
+/* Container for all posts */
+.all-posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+  justify-content: center;
+}
+
+/* Individual post item */
+.post-item {
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 60%;
+  min-width: 60%;
+  box-shadow: 1px 1px 1px 4px rgba(0, 0, 0, 0.1); /* Adding box-shadow for a subtle effect */
+}
+.breadcrumbs {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.all-posts-container h2 {
+  color: var(--h3-dark-blue);
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #2f528e;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+.post-thumbnail {
+  width: 150px;
+
+  object-fit: cover;
+}
+
+.post-details {
+  padding: 10px;
+  flex: 1;
+}
+
+.post-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.post-excerpt {
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.post-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-tag {
+  background-color: #caff43;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.news-tag {
+  background-color: #5a75a6;
+  color: white;
+}
+.read-button {
+  padding: 8px 16px;
+  background-color: #0ab1ee;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Mobile optimization */
+@media (max-width: 415px) {
+  .post-item {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .post-thumbnail {
+    width: 100%;
+    height: auto;
+  }
+}

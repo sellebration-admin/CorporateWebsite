@@ -6,9 +6,15 @@ import SocialMediaCardForLinkedIn from "../SocialMediaCard/SocialMediaCardForLin
 const SocialMedia = () => {
   return (
     <div className="social-media-news">
-      <div className="social-content-columns">
-        <SocialMediaCardForTwitter />
-        <SocialMediaCardForLinkedIn />
+      <div className="social-media-flexbox">
+        <div className="social-content-columns">
+          <div>
+            <SocialMediaCardForTwitter />
+          </div>
+          <div>
+            <SocialMediaCardForLinkedIn />
+          </div>
+        </div>
       </div>
     </div>
   );

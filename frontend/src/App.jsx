@@ -40,7 +40,7 @@ const App = () => {
           element: <AddAPostPage />,
         },
         {
-          path: "/posts",
+          path: "/blog",
           element: <AllPostsPage />,
         },
         {

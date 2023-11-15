@@ -1,0 +1,135 @@
+/* RichTextEditor.css */
+
+/* Container styling */
+.editor-container {
+  font-family: "Roboto", sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 800px;
+  margin-top: 20vh;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.editor-container h2 {
+  color: #5a75a6;
+}
+/* Tag and category selectors */
+.tag-selector {
+  margin-bottom: 15px;
+}
+
+.label-select {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.select-box {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+/* Quill editor styling */
+.ql-toolbar {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+}
+
+.ql-container {
+  min-height: 300px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Quill editor toolbar buttons */
+.ql-toolbar button {
+  padding: 8px 12px;
+  margin: 2px;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.ql-toolbar button:hover {
+  background-color: #e6e6e6;
+}
+
+.ql-toolbar button.active {
+  background-color: #ddd;
+}
+
+/* Placeholder text styling */
+.ql-editor::before {
+  color: #aaa;
+}
+
+/* Add Post button */
+.add-post-button {
+  padding: 10px 20px;
+  background-color: #0ab1ee;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.add-post-button:hover {
+  opacity: 0.7;
+}
+
+/* Image uploader button */
+.ql-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.ql-image input[type="file"] {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Mobile optimization */
+@media (max-width: 415px) {
+  .editor-container {
+    margin: 10px auto;
+    border-radius: 0;
+    border: none;
+    padding-top: 20vh;
+  }
+
+  .ql-container {
+    border-radius: 0;
+  }
+
+  .ql-toolbar {
+    border-radius: 0;
+  }
+
+  .ql-toolbar button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}

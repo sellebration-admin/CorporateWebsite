@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { sortIcon, logo, search } from "./../../assets/index";
 import { Link } from "react-router-dom";
 const Header = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+    console.log("Clickedf");
+  };
   return (
     <header>
       <div className="wrapper">
@@ -15,7 +21,9 @@ const Header = () => {
             </Link>
           </div>
           <div className="right-column">
-            <img src={sortIcon} alt="sort" className="sort-logo" />
+            <div onClick={toggleMenu} className="sort-icon-wrapper">
+              <img src={sortIcon} alt="sort" className="sort-logo" />
+            </div>
             <form className="search-form">
               <input
                 type="text"
@@ -49,3 +57,22 @@ const Header = () => {
 };
 
 export default Header;
+
+{
+  /* <div className={`menu ${showMenu ? "show-menu" : ""}`}>
+<button className="exit-button" onClick={toggleMenu}>
+  Exit
+</button>
+<div className="menu-columns">
+  <div className="menu-column">
+    <Link to="/link1">Link 1</Link>
+    <Link to="/link2">Link 2</Link>
+    <Link to="/link3">Link 3</Link>
+  </div>
+
+  <div className="menu-column"></div>
+
+  <div className="menu-column"></div>
+</div>
+</div> */
+}

@@ -1,0 +1,35 @@
+
+
+.related-posts-widget {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .related-posts-widget h3 {
+    font-size: 20px;
+    color: #2f528e;
+    margin-bottom: 15px;
+  }
+  
+  .related-post {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .related-post img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  .related-post p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+  }
+  
+  
+  
