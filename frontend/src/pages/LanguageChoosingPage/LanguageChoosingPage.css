@@ -2,6 +2,11 @@
   background: url(https://sellebration-main-web-git-master-host-sellebration.vercel.app/static/media/backimg.c405bb3a31f98c7b770f.png)
     repeat;
   background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
 }
 .language-choosing-page-container {
   display: flex;
@@ -9,6 +14,7 @@
   align-items: center;
   height: 100vh;
   padding-top: 20px;
+  width: 100vh;
 }
 .first-logo {
   display: flex;
@@ -145,7 +151,8 @@
 }
 
 .background-map-holder {
-  width: 100vh;
+  width: 50%;
+  height: 50%;
   display: flex;
   margin: 0 auto;
   align-items: center;
@@ -169,10 +176,12 @@
   }
   .background-map-holder {
     width: 100%;
-    max-width: 300px; 
-    height: 200px; 
-    margin-top: 20px; 
-    background-size: cover; 
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    margin-top: 20px;
+    background-size: contain;
+    background-position: 50% 30%;
   }
 
   .first-logo img {
@@ -240,7 +249,8 @@
   }
 
   .background-map-holder {
-    width: 10vh;
+    width: 50%;
+    height: 50%;
     display: flex;
     margin: 0 auto;
     align-items: center;

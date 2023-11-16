@@ -1,61 +1,15 @@
 header {
   background: linear-gradient(180deg, #ebf0ff 0%, #5874a6 0.01%, #2f528e 100%);
-}
-
-.menu {
-  position: absolute;
-  top: 100%; /* Initially off-screen, below the header */
-  right: 0;
-  height: calc(100vh - 70px); /* Adjust 70px according to your header's height */
-  width: 80%; /* Adjust the width as needed */
-  max-width: 300px;
-  background-color: #5a75a6;
-  z-index: 2;
-  transition: top 0.3s ease-in-out;
-}
-
-.menu.show-menu {
-  top: 0; /* Slide in from the top */
-}
-
-.exit-button {
-  color: white;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  font-size: 16px;
-  margin-top: 20px;
-}
-
-.menu-columns {
+  width: 100%;
   display: flex;
-  height: 100%;
-}
-
-.menu-column {
-  flex: 1;
-  padding: 20px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-}
-
-.menu-column a {
-  text-decoration: none;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.menu-separator {
-  width: 1px;
-  background-color: white;
-  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 header .wrapper {
   display: flex;
   justify-content: center;
+
   min-width: 1148px;
   margin: 0 auto;
   width: 100%;
@@ -67,10 +21,52 @@ header .wrapper {
 
 header .container {
   display: flex;
-  width: 90%;
+  width: 80%;
   align-items: center;
   justify-content: space-between;
+  max-width: 1244px;
 }
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50vh;
+  width: 100vw;
+  z-index: 3;
+  display: none;
+}
+
+.menu.show-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #5a75a6;
+  top: 60px;
+}
+
+.menu-columns {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  padding-top: 50px;
+}
+
+.menu-column {
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: #5a75a6;
+}
+
+.menu-column a {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+}
+
 .right-column {
   display: flex;
   line-height: 30px;
@@ -145,7 +141,7 @@ button[type="submit"]:hover {
   appearance: none;
   background-color: transparent;
   border: none;
-  width: 100%;
+  width: 60%;
   height: 30px;
   cursor: pointer;
   border: 1.5px solid white;
@@ -157,9 +153,6 @@ button[type="submit"]:hover {
 
 .right-column select:focus {
   outline: none;
-}
-
-.right-column select:placeholder-shown {
 }
 
 .right-column select option {
@@ -184,8 +177,8 @@ button[type="submit"]:hover {
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  right: 11px;
-  top: 5px;
+  right: 56px;
+  top: 4px;
   padding: 0 0 2px;
   position: absolute;
   pointer-events: none;
@@ -197,8 +190,7 @@ button[type="submit"]:hover {
   }
 
   header .container {
-    width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 20%;
   }
   .logo-image {
@@ -236,7 +228,7 @@ button[type="submit"]:hover {
   }
 
   .menu {
-    width: 80%;
-    max-width: 300px;
+    width: 100%;
+
   }
 }

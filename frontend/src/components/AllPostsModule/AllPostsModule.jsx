@@ -121,7 +121,7 @@ const AllPostsModule = () => {
   return (
     <div className="posts-module-div">
       <div className="all-posts-container">
-        <h2>Company Blog</h2>
+
       <div className="breadcrumbs">
         <Link to="/index">Home</Link> / <Link to="/blog">Blog</Link>
       </div>
@@ -150,7 +150,6 @@ const AllPostsModule = () => {
           </div>
         ))}
 
-        {/* Pagination */}
         <div className="pagination">
           {Array(Math.ceil(mockPosts.length / PAGE_SIZE))
             .fill()

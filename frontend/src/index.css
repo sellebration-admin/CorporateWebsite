@@ -11,14 +11,15 @@
   box-sizing: border-box;
 }
 .wrapper {
-  max-width: 100%;
+
   margin: 0 auto;
 }
 
 body {
-  max-width: 100%;
-  position: relative;
-  margin: 0;
+
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
   font-family: "Montserrat", sans-serif;
 }
 

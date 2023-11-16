@@ -51,28 +51,27 @@ const Header = () => {
             </div>
           </div>
         </div>
+        <div className={`menu ${showMenu ? "show-menu" : ""}`}>
+          <div className="menu-columns">
+            <div className="menu-column">
+              <Link to="/register">Register</Link>
+              <Link to="/login">Login</Link>
+            </div>
+
+            <div className="menu-column">
+              <Link to="/blog">Blog</Link>
+              <Link to="/addpost">Add a post</Link>
+              <Link to="/"></Link>
+            </div>
+
+            <div className="menu-column">
+              <Link onClick={toggleMenu}>Exit</Link>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
   );
 };
 
 export default Header;
-
-{
-  /* <div className={`menu ${showMenu ? "show-menu" : ""}`}>
-<button className="exit-button" onClick={toggleMenu}>
-  Exit
-</button>
-<div className="menu-columns">
-  <div className="menu-column">
-    <Link to="/link1">Link 1</Link>
-    <Link to="/link2">Link 2</Link>
-    <Link to="/link3">Link 3</Link>
-  </div>
-
-  <div className="menu-column"></div>
-
-  <div className="menu-column"></div>
-</div>
-</div> */
-}

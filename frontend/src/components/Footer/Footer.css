@@ -6,15 +6,21 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+
+  left: 0;
 }
 
 .lines {
-  width: 85%;
+  width: 80%;
+  max-width: 80%;
+  max-width: 1244px;
 }
 .first-line {
   display: flex;
   padding-top: 15px;
   justify-content: space-between;
+  line-height: 20px;
 }
 
 .first-line-links-list {
@@ -65,7 +71,7 @@ footer {
 .first-line-social-icons {
   display: flex;
 }
-.first-line-social-icons img{
+.first-line-social-icons img {
   width: 26px;
   height: 26px;
 }

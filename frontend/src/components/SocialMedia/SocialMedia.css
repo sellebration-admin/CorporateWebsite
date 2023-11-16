@@ -4,23 +4,43 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .social-media-flexbox {
-  width: 90%;
+  width: 80%;
+  max-width: 1244px;
 }
 
 .social-content-columns {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 30px;
+
 }
+
+.column-one{
+  flex: 1;
+  padding: 15px;
+
+}
+
+.column-two{
+  flex: 2;
+  padding: 15px;
+
+}
+
+
 
 @media only screen and (max-width: 415px) {
   .social-content-columns {
     display: flex;
     flex-direction: column;
     gap: 30px;
+  }
+
+  .social-media-flexbox {
+    width: 100%;
   }
 }

@@ -1,11 +1,12 @@
 .our-stories {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
   padding: 20px;
+  max-width: 1244px;
 }
 
 .stories-container {

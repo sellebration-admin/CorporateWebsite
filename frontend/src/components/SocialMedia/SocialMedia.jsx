@@ -8,10 +8,10 @@ const SocialMedia = () => {
     <div className="social-media-news">
       <div className="social-media-flexbox">
         <div className="social-content-columns">
-          <div>
+          <div className="column-one">
             <SocialMediaCardForTwitter />
           </div>
-          <div>
+          <div className="column-two">
             <SocialMediaCardForLinkedIn />
           </div>
         </div>
