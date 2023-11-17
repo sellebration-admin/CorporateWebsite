@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import StoriesCard from "../StoriesCard/StoriesCard";
-import data from "../../data/stories.json";
 import "./StoriesCardList.css";
 
-const StoriesCardList = ({ activeTab }) => {
+const StoriesCardList = ({ activeTab, posts }) => {
   const tabs = [
     { label: "Recommended" },
     { label: "Leadership" },
@@ -11,31 +10,29 @@ const StoriesCardList = ({ activeTab }) => {
     { label: "Sustainability" },
   ];
 
-  const [numCards, setNumCards] = useState(3); // State to store the number of cards
+  const [numCards, setNumCards] = useState(3);
 
   const updateCardsForScreenSize = () => {
     const screenWidth = window.innerWidth;
     if (screenWidth <= 415) {
-      setNumCards(1); // If screen width is 415px or less, display 1 card
+      setNumCards(1);
     } else {
-      setNumCards(3); // For other screen sizes, display 3 cards
+      setNumCards(3);
     }
   };
 
   useEffect(() => {
-    updateCardsForScreenSize(); // Initial check for screen size
-    window.addEventListener("resize", updateCardsForScreenSize); // Listen for resize events
-
-    // Cleanup the event listener on component unmount
+    updateCardsForScreenSize();
+    window.addEventListener("resize", updateCardsForScreenSize);
     return () => {
       window.removeEventListener("resize", updateCardsForScreenSize);
     };
-  }, []); // Empty dependency array ensures useEffect runs only once on mount
+  }, []);
 
   const filteredStories =
     activeTab === 0
-      ? data
-      : data.filter((story) => story.tag === tabs[activeTab].label);
+      ? posts
+      : posts.filter((story) => story.subcat === tabs[activeTab].label);
 
   return (
     <div className="cards-list">

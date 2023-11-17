@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Header.css";
 import { sortIcon, logo, search } from "./../../assets/index";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/authContext";
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
 
+  const { currentUser, logout } = useContext(AuthContext);
   const toggleMenu = () => {
     setShowMenu(!showMenu);
     console.log("Clickedf");
   };
+
   return (
     <header>
       <div className="wrapper">
@@ -60,8 +63,14 @@ const Header = () => {
 
             <div className="menu-column">
               <Link to="/blog">Blog</Link>
-              <Link to="/addpost">Add a post</Link>
-              <Link to="/"></Link>
+              {currentUser && (
+                <div className="visible-to-logged-in">
+                  <Link to="/addpost">Add a post</Link>
+                  <Link onClick={logout} to="/index">
+                    Logout
+                  </Link>
+                </div>
+              )}
             </div>
 
             <div className="menu-column">

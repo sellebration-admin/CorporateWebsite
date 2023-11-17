@@ -1,6 +1,3 @@
-/* RichTextEditor.css */
-
-/* Container styling */
 .editor-container {
   font-family: "Roboto", sans-serif;
   border: 1px solid #ccc;
@@ -12,11 +9,18 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
+.red-star {
+  color: red;
+}
 
+.post-buttons {
+  display: flex;
+  gap: 30px;
+}
 .editor-container h2 {
   color: #5a75a6;
 }
-/* Tag and category selectors */
+
 .tag-selector {
   margin-bottom: 15px;
 }
@@ -87,6 +91,15 @@
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
+}
+
+.add-post-button:disabled {
+  opacity: 0.4;
+}
+
+.add-post-button:disabled:hover {
+  opacity: 0.4;
+  cursor: unset;
 }
 
 .add-post-button:hover {

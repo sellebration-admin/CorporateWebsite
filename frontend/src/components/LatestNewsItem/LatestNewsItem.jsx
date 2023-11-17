@@ -1,18 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./LatestNewsItem.css";
+
 const LatestNewsItem = ({ news }) => {
-  const { title, text, link } = news;
+  const { title, date, id } = news;
+
   return (
     <div className="latest-news-item">
       <div className="latest-news-container">
-        <div className="news-title">
-          <h3>{title}</h3>
-        </div>
-        <div className="news-text">
-          <a href={link}>
-            <p>{text}</p>
-          </a>
-        </div>
+        <Link to={`/post/${id}`} className="news-link">
+          <div className="news-title">
+            <h3>{title}</h3>
+          </div>
+          <div className="news-text">
+            <span className="post-date">
+              {new Date(date).toLocaleDateString("en-US", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric",
+              })}
+            </span>
+          </div>
+        </Link>
       </div>
     </div>
   );

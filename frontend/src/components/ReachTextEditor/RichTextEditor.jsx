@@ -3,12 +3,11 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "./RichTextEditor.css";
 
-//To do - add date by Date.now
 const RichTextEditor = ({ placeholder }) => {
   const [content, setContent] = useState({
-    text: "", // Text content
-    tag: "", // Selected tag
-    category: "", // Selected category (for stories)
+    text: "",
+    tag: "",
+    category: "",
   });
 
   const handleContentChange = (value) => {
@@ -34,7 +33,9 @@ const RichTextEditor = ({ placeholder }) => {
     <div className="editor-container">
       <h2>Add new post</h2>
       <div className="tag-selector">
-        <label htmlFor="tag">Select Tag:</label>
+        <label htmlFor="tag">
+          Select Category:<b className="red-star">*</b>
+        </label>
         <select
           id="tag"
           value={content.tag}
@@ -50,7 +51,9 @@ const RichTextEditor = ({ placeholder }) => {
 
         {content.tag === "Story" && (
           <div className="category-selector">
-            <label htmlFor="category">Select Category:</label>
+            <label htmlFor="category">
+              Select Sbucategory:<b className="red-star">*</b>
+            </label>
             <select
               id="category"
               value={content.category}
@@ -82,7 +85,7 @@ const RichTextEditor = ({ placeholder }) => {
               { indent: "-1" },
               { indent: "+1" },
             ],
-            ["link", "image", "video"],
+            ["link"],
             ["clean"],
           ],
         }}
@@ -99,15 +102,18 @@ const RichTextEditor = ({ placeholder }) => {
           "bullet",
           "indent",
           "link",
-          "image",
-          "video",
         ]}
         placeholder={placeholder || "Write something amazing..."}
       />
+      <div className="post-buttons">
+        <button className="add-post-button" onClick={handleAddPost}>
+          Upload image<b className="red-star">*</b>
+        </button>
 
-      <button className="add-post-button" onClick={handleAddPost}>
-        Add Post
-      </button>
+        <button className="add-post-button" onClick={handleAddPost} disabled>
+          Add Post
+        </button>
+      </div>
     </div>
   );
 };

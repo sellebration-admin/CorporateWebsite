@@ -19,6 +19,11 @@ header .wrapper {
   background: linear-gradient(180deg, #ebf0ff 0%, #5a75a6 0.01%);
 }
 
+.visible-to-logged-in {
+  display: flex;
+  flex-direction: column;
+}
+
 header .container {
   display: flex;
   width: 80%;
@@ -229,6 +234,5 @@ button[type="submit"]:hover {
 
   .menu {
     width: 100%;
-
   }
 }
