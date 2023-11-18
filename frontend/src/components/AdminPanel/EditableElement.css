@@ -1,0 +1,62 @@
+.editable-element {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .editable-element h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .editable-element p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .editable-element input,
+  .editable-element textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .editable-element button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .editable-element button:hover {
+    background-color: #0056b3;
+  }
+  
+  .post-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .post-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .post-details {
+    flex-grow: 1;
+  }
+  
+  .category,
+  .subcategory,
+  .date {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #888;
+  }
+  

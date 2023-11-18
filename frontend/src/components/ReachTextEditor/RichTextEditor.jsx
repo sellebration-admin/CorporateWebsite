@@ -1,29 +1,118 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "./RichTextEditor.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/authContext";
 
 const RichTextEditor = ({ placeholder }) => {
+  const { currentUser } = useContext(AuthContext);
   const [content, setContent] = useState({
-    text: "",
-    tag: "",
-    category: "",
+    title: "",
+    desc: "",
+    img: "",
+    cat: "News",
+    subcat: "",
+    date: Date.now().toString(),
+    user_id: currentUser.id,
   });
 
+  const navigate = useNavigate();
+  const [selectedFile, setSelectedFile] = useState();
+  const [isAllFieldsFilled, setIsAllFieldsFilled] = useState(true);
+
+  const handleUploadImage = async () => {
+    try {
+      if (!selectedFile) {
+        console.error("No file selected");
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append("image", selectedFile);
+
+      console.log("FormData:", formData);
+
+      const response = await axios.post(
+        "http://localhost:8800/api/files/upload",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        const imageUrl = response.data.imageUrl;
+        setContent({ ...content, img: imageUrl });
+      } else {
+        console.error("Failed to upload image");
+      }
+    } catch (error) {
+      console.error("Error uploading image:", error);
+    }
+  };
+
+  useEffect(() => {
+    const { title, desc, img, cat, subcat, date, user_id } = content;
+    const allFieldsFilled = title && desc && img && cat && date && user_id;
+    setIsAllFieldsFilled(!allFieldsFilled);
+  }, [content]);
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setSelectedFile(file);
+    console.log("Selected File:", file);
+  };
+
+  const handleTitleChange = (e) => {
+    const { value } = e.target;
+    setContent({ ...content, title: value });
+  };
+
   const handleContentChange = (value) => {
-    setContent({ ...content, text: value });
+    setContent({ ...content, desc: value });
   };
 
-  const handleTagChange = (e) => {
-    setContent({ ...content, tag: e.target.value });
+  const handleCatChange = (e) => {
+    setContent({ ...content, cat: e.target.value });
   };
 
-  const handleCategoryChange = (e) => {
-    setContent({ ...content, category: e.target.value });
+  const handleSubCategoryChange = (e) => {
+    setContent({ ...content, subcat: e.target.value });
   };
 
-  const handleAddPost = () => {
-    window.console.log("Post Content:", content);
+  const handleAddPost = async () => {
+    const { title, desc, img, cat, subcat, date, user_id } = content;
+    if (title && desc && img && cat && date && user_id) {
+      setIsAllFieldsFilled(!isAllFieldsFilled);
+      try {
+        const response = await axios.post(
+          "http://localhost:8800/api/posts/",
+          content
+        );
+        if (response.status === 200) {
+          alert("Post added successfully");
+          setContent({
+            title: "",
+            desc: "",
+            img: "",
+            cat: "News",
+            subcat: "",
+            date: Date.now().toString(),
+            user_id: currentUser.id,
+          });
+          setIsAllFieldsFilled(true);
+          navigate(`/post/${response.data}`);
+        }
+      } catch (error) {
+        alert("Error! Try again.");
+      }
+    } else {
+      alert(`Please fill in all required fields.`);
+    }
   };
 
   const tagOptions = ["News", "Story"];
@@ -38,8 +127,8 @@ const RichTextEditor = ({ placeholder }) => {
         </label>
         <select
           id="tag"
-          value={content.tag}
-          onChange={handleTagChange}
+          value={content.cat}
+          onChange={handleCatChange}
           required
         >
           {tagOptions.map((tag, index) => (
@@ -49,15 +138,15 @@ const RichTextEditor = ({ placeholder }) => {
           ))}
         </select>
 
-        {content.tag === "Story" && (
+        {content.cat === "Story" && (
           <div className="category-selector">
             <label htmlFor="category">
               Select Sbucategory:<b className="red-star">*</b>
             </label>
             <select
               id="category"
-              value={content.category}
-              onChange={handleCategoryChange}
+              value={content.subcat}
+              onChange={handleSubCategoryChange}
               required
             >
               {storyCategories.map((category, index) => (
@@ -68,11 +157,24 @@ const RichTextEditor = ({ placeholder }) => {
             </select>
           </div>
         )}
+
+        <div className="title-input">
+          <label htmlFor="title">
+            Title:<b className="red-star">*</b>
+          </label>
+          <input
+            id="title"
+            type="text"
+            value={content.title}
+            onChange={handleTitleChange}
+            required
+          />
+        </div>
       </div>
 
       <ReactQuill
         theme="snow"
-        value={content.text}
+        value={content.desc}
         onChange={handleContentChange}
         modules={{
           toolbar: [
@@ -106,11 +208,22 @@ const RichTextEditor = ({ placeholder }) => {
         placeholder={placeholder || "Write something amazing..."}
       />
       <div className="post-buttons">
-        <button className="add-post-button" onClick={handleAddPost}>
-          Upload image<b className="red-star">*</b>
-        </button>
+        <div className="file-upload">
+          <input type="file" accept="image/*" onChange={handleFileChange} />
+          <button
+            className="upload-image-button"
+            onClick={handleUploadImage}
+            disabled={!selectedFile}
+          >
+            Upload Image
+          </button>
+        </div>
 
-        <button className="add-post-button" onClick={handleAddPost} disabled>
+        <button
+          className="add-post-button"
+          onClick={handleAddPost}
+          disabled={isAllFieldsFilled}
+        >
           Add Post
         </button>
       </div>

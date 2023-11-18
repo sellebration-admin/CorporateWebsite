@@ -31,65 +31,71 @@ export const getPost = (req, res) => {
 };
 
 export const addPost = (req, res) => {
-  const token = req.cookies.access_token;
-  if (!token) return res.status(401).json("Not authenticated!");
+  const q =
+    "INSERT INTO posts(`title`, `desc`, `img`, `cat`, `subcat`, `date`,`user_id`) VALUES (?)";
+  const timestamp = req.body.date;
+  const date = new Date(parseInt(timestamp));
+  const formattedDate = date.toISOString().slice(0, 19).replace("T", " ");
+  const values = [
+    req.body.title,
+    req.body.desc,
+    req.body.img,
+    req.body.cat,
+    req.body.subcat,
+    formattedDate,
+    req.body.user_id,
+  ];
 
-  jwt.verify(token, "jwtkey", (err, userInfo) => {
-    if (err) return res.status(403).json("Token is not valid!");
-
-    const q =
-      "INSERT INTO posts(`title`, `desc`, `img`, `cat`, `date`,`uid`) VALUES (?)";
-
-    const values = [
-      req.body.title,
-      req.body.desc,
-      req.body.img,
-      req.body.cat,
-      req.body.date,
-      userInfo.id,
-    ];
-
-    db.query(q, [values], (err, data) => {
-      if (err) return res.status(500).json(err);
-      return res.json("Post has been created.");
-    });
+  db.query(q, [values], (err, result) => {
+    if (err) {
+      console.error("Error executing query:", err);
+      return res.status(500).json(err);
+    }
+    const postId = result.insertId;
+    return res.json(postId);
   });
 };
 
 export const deletePost = (req, res) => {
-  const token = req.cookies.access_token;
-  if (!token) return res.status(401).json("Not authenticated!");
+  const postId = req.params.id;
+  const q = "DELETE FROM posts WHERE `id` = ?";
 
-  jwt.verify(token, "jwtkey", (err, userInfo) => {
-    if (err) return res.status(403).json("Token is not valid!");
-
-    const postId = req.params.id;
-    const q = "DELETE FROM posts WHERE `id` = ? AND `uid` = ?";
-
-    db.query(q, [postId, userInfo.id], (err, data) => {
-      if (err) return res.status(403).json("You can delete only your post!");
-
-      return res.json("Post has been deleted!");
-    });
+  db.query(q, [postId], (err, data) => {
+    return res.json("Post has been deleted!");
   });
 };
 
 export const updatePost = (req, res) => {
-  const token = req.cookies.access_token;
-  if (!token) return res.status(401).json("Not authenticated!");
+  const postId = req.params.id;
+  const fieldsToUpdate = {};
+  const values = [];
 
-  jwt.verify(token, "jwtkey", (err, userInfo) => {
-    if (err) return res.status(403).json("Token is not valid!");
+  // Check and add the fields to update based on the data sent from the frontend
+  if (req.body.title) {
+    fieldsToUpdate.title = req.body.title;
+    values.push(req.body.title);
+  }
+  if (req.body.desc) {
+    fieldsToUpdate.desc = req.body.desc;
+    values.push(req.body.desc);
+  }
+  if (req.body.img) {
+    fieldsToUpdate.img = req.body.img;
+    values.push(req.body.img);
+  }
+  if (req.body.cat) {
+    fieldsToUpdate.cat = req.body.cat;
+    values.push(req.body.cat);
+  }
 
-    const postId = req.params.id;
-    const q =
-      "UPDATE posts SET `title`=?,`desc`=?,`img`=?,`cat`=? WHERE `id` = ? AND `uid` = ?";
+  const fields = Object.keys(fieldsToUpdate)
+    .map((field) => `\`${field}\`=?`)
+    .join(",");
 
-    const values = [req.body.title, req.body.desc, req.body.img, req.body.cat];
+  const q = `UPDATE posts SET ${fields} WHERE \`id\` = ?`;
 
-    db.query(q, [...values, postId, userInfo.id], (err, data) => {
-      if (err) return res.status(500).json(err);
-      return res.json("Post has been updated.");
-    });
+  db.query(q, [...values, postId], (err, data) => {
+    if (err) return res.status(500).json(err);
+    return res.json("Post has been updated.");
   });
 };
