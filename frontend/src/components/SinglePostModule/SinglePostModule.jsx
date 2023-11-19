@@ -11,7 +11,7 @@ const SinglePostModule = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8800/api/posts/${id}`
+          `http://3.110.51.174:8800/api/posts/${id}`
         );
         setPostData(response.data);
       } catch (error) {

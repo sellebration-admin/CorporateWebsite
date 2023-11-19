@@ -15,7 +15,7 @@ const AllPostsModule = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let url = "http://localhost:8800/api/posts/";
+        let url = "http://3.110.51.174:8800/api/posts/";
         if (cat) {
           url += `?cat=${cat}`;
         }

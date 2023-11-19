@@ -15,7 +15,7 @@ const EditableElement = ({ post }) => {
     try {
       const updatedPost = { title, desc };
       await axios.put(
-        `http://localhost:8800/api/posts/${post.id}`,
+        `http://3.110.51.174:8800/api/posts/${post.id}`,
         updatedPost
       );
       setIsEditing(false);

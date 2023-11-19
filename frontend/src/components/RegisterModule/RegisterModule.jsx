@@ -26,7 +26,7 @@ const RegisterModule = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8800/api/auth/register",
+        "http://3.110.51.174:8800/api/auth/register",
         inputs
       );
       if (res.data === "User registered successfully") {

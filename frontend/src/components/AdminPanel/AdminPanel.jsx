@@ -33,7 +33,7 @@ const AdminPanel = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:8800/api/posts/");
+      const res = await axios.get("http://3.110.51.174:8800/api/posts/");
       if (Array.isArray(res.data)) {
         const sortedPosts = res.data
           .slice()
@@ -49,7 +49,7 @@ const AdminPanel = () => {
 
   const handleDeleteClick = async (postId) => {
     try {
-      await axios.delete(`http://localhost:8800/api/posts/${postId}`);
+      await axios.delete(`http://3.110.51.174:8800/api/posts/${postId}`);
       fetchData();
     } catch (error) {
       console.error("Error deleting post:", error);

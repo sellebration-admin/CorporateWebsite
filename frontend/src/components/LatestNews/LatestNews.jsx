@@ -10,7 +10,7 @@ const LatestNews = () => {
   useEffect(() => {
     const fetchNewsPosts = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/api/posts", {
+        const res = await axios.get("http://3.110.51.174:8800/api/posts", {
           params: { cat: "news" },
         });
         if (Array.isArray(res.data)) {

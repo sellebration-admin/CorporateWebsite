@@ -35,7 +35,7 @@ const RichTextEditor = ({ placeholder }) => {
       console.log("FormData:", formData);
 
       const response = await axios.post(
-        "http://localhost:8800/api/files/upload",
+        "http://3.110.51.174:8800/api/files/upload",
         formData,
         {
           headers: {
@@ -90,7 +90,7 @@ const RichTextEditor = ({ placeholder }) => {
       setIsAllFieldsFilled(!isAllFieldsFilled);
       try {
         const response = await axios.post(
-          "http://localhost:8800/api/posts/",
+          "http://3.110.51.174:8800/api/posts/",
           content
         );
         if (response.status === 200) {
