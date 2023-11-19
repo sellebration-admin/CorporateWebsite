@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./LatestNews.css";
 import LatestNewsList from "../LatestNewsList/LatestNewsList";
-import YoutubeVideoContainer from "../YouTubeVideoContainer/YoutubeVideoContainer";
+import YoutubeVideoContainer from "../YouTubeVideoContainer/YouTubeVideoContainer";
 import axios from "axios";
 
 const LatestNews = () => {
