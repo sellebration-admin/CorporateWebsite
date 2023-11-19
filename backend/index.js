@@ -6,11 +6,16 @@ import { upload, handleFileUpload } from "./middleware/multer.js";
 import postRoutes from "./routes/postsRoute.js";
 import authRoutes from "./routes/authRoute.js";
 
-
 const app = express();
 app.use(express.json());
 
-app.use(cors());
+const corsOptions = {
+  origin: "*",
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use("/api/files", handleFileUpload);
 app.use("/api/auth", authRoutes);
