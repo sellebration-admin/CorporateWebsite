@@ -10,7 +10,7 @@ import twitterFooter from "./twitterfooterthree.png";
 import linkedinFooter from "./lifooter.png";
 import instagramFooter from "./igfooter.png";
 import facebookFooter from "./fbfooter.png";
-import youtubeFooter from "./youtubeFooter.png";
+import youtubeFooter from "./youtubefooter.png";
 import doneIcon from "./doneIcon.png";
 import failIcon from "./failIcon.png";
 export {
