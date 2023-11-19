@@ -5,7 +5,7 @@ import { upload, handleFileUpload } from "./middleware/multer.js";
 
 import postRoutes from "./routes/postsRoute.js";
 import authRoutes from "./routes/authRoute.js";
-import filesUploadRoute from "./routes/filesUploadRoute.js";
+
 
 const app = express();
 app.use(express.json());
