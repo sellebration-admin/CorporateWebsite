@@ -25,6 +25,10 @@ app.post("/api/files/upload", (req, res) => {
   res.status(200).send("File uploaded successfully!");
 });
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the root URL!");
+});
+
 app.listen(8800, () => {
-  console.log("Connected!");
+  console.log("Server started on port 8800!");
 });
