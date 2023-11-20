@@ -49,6 +49,9 @@ header .container {
   align-items: center;
   background-color: #5a75a6;
   top: 60px;
+  height: auto;
+  margin: 0 auto;
+
 }
 
 .menu-columns {
@@ -56,8 +59,19 @@ header .container {
   width: 80%;
   height: 100%;
   padding-top: 50px;
+  position: relative;
+}
+.vertical-line {
+  border: 2px solid white;
+  height: 40vh;
+  width: 2px;
+  margin-top: 20px;
 }
 
+.horizontal-line {
+  border: 1px solid white;
+  margin-bottom: 20px;
+}
 .menu-column {
   padding: 20px;
   color: white;
@@ -209,6 +223,13 @@ button[type="submit"]:hover {
   .selectdiv {
     display: none;
   }
+  .vertical-line {
+    display: none;
+  }
+
+  .horizontal-line {
+    display: none;
+  }
 
   .wrapper {
     width: 100%;
@@ -231,8 +252,26 @@ button[type="submit"]:hover {
   .selectdiv {
     display: none;
   }
-
+  .vertical-line {
+    display: none;
+  }
   .menu {
     width: 100%;
+    height: auto;
+  }
+
+  .menu.show-menu {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-columns {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-column {
+    border: 2px solid white;
+    margin: 15px;
+    border-radius: 16px;
   }
 }

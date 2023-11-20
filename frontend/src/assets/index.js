@@ -13,6 +13,7 @@ import facebookFooter from "./fbfooter.png";
 import youtubeFooter from "./youtubefooter.png";
 import doneIcon from "./doneIcon.png";
 import failIcon from "./failIcon.png";
+import navbarbg from "./backimg.c405bb3a31f98c7b770f.png";
 export {
   map,
   logo,
@@ -29,4 +30,5 @@ export {
   logotransp,
   doneIcon,
   failIcon,
+  navbarbg,
 };
