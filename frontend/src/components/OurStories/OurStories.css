@@ -23,7 +23,7 @@
   .tabs-component {
     padding-left: 0px;
     padding-right: 0px;
-    padding-top: 0px;
+
     padding-bottom: 0px;
     display: flex;
     margin: 0 auto;
@@ -34,6 +34,7 @@
 
   .our-stories {
     width: 100%;
+    padding-top: 150px;
   }
   .stories-container {
     padding: 15px;

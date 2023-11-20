@@ -61,10 +61,14 @@ const NewHeader = () => {
                   <img
                     src={whiteLogo}
                     alt="logo"
-                    className="nheader-logo-image"
+                    className="nheader-logo-image-white"
                   />
                 ) : (
-                  <img src={nblogo} alt="logo" className="nheader-logo-image" />
+                  <img
+                    src={nblogo}
+                    alt="logo"
+                    className="nheader-logo-image-black"
+                  />
                 )}
               </div>
             </Link>
