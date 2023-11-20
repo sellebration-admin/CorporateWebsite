@@ -11,6 +11,7 @@ import Login from "./pages/Login/Login";
 import AdminPanelPage from "./pages/AdminPanelPage/AdminPanelPage";
 import Register from "./pages/Register/Register";
 import { AuthContextProvider } from "./context/authContext";
+import TestPage from "./pages/TestPage/TestPage";
 const App = () => {
   const Layout = () => {
     return (
@@ -55,6 +56,10 @@ const App = () => {
         {
           path: "/admin",
           element: <AdminPanelPage />,
+        },
+        {
+          path: "/test",
+          element: <TestPage />,
         },
       ],
     },

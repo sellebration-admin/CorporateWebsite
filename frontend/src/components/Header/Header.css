@@ -1,22 +1,31 @@
-header {
+.header-main {
   background: linear-gradient(180deg, #ebf0ff 0%, #5874a6 0.01%, #2f528e 100%);
-  width: 100%;
+width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  position: fixed;
+  z-index: 2;
+}
+.header-main.scrolled {
+  background-color: transparent;
 }
 
-header .wrapper {
-  display: flex;
+.wrapper {
+  /* display: flex;
+  flex-direction: row;
   justify-content: center;
-
   min-width: 1148px;
   margin: 0 auto;
   width: 100%;
   z-index: 3;
   position: fixed;
   top: 0px;
-  background: linear-gradient(180deg, #ebf0ff 0%, #5a75a6 0.01%);
+  background-color: linear-gradient(180deg, #ebf0ff 0%, #5a75a6 0.01%); */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .visible-to-logged-in {
@@ -24,13 +33,6 @@ header .wrapper {
   flex-direction: column;
 }
 
-header .container {
-  display: flex;
-  width: 80%;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1244px;
-}
 
 .menu {
   position: fixed;
@@ -51,7 +53,6 @@ header .container {
   top: 60px;
   height: auto;
   margin: 0 auto;
-
 }
 
 .menu-columns {
@@ -146,8 +147,9 @@ button[type="submit"]:hover {
 }
 
 .header-logo {
-  width: 70px;
-  height: 70px;
+  width: 123px;
+  height: 123px;
+  margin-left: 70px;
 }
 .logo-image {
   width: 100%;

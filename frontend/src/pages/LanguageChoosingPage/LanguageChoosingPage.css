@@ -6,14 +6,13 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-
 }
 .language-choosing-page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  padding-top: 20px;
+  /* padding-top: 20px; */
   width: 100vh;
 }
 .first-logo {
@@ -49,7 +48,7 @@
 .marquee {
   overflow: hidden;
   height: 55px;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .landing__inner__middle__div {
@@ -70,7 +69,7 @@
 }
 
 .language-selector {
-  padding-top: 50px;
+  padding-top: 10px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -140,9 +139,10 @@
   cursor: pointer;
   font-size: 18px;
   font-weight: 400;
-  width: 120px;
+  width: 154px;
   margin-top: 15px;
   z-index: 3;
+  box-shadow: 5px 15px 20px rgba(0.4, 0.4, 0.4, 0.4);
 }
 
 .button-div button:hover {
@@ -151,13 +151,13 @@
 }
 
 .background-map-holder {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 80%;
   display: flex;
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-  background-image: url("../../assets/image.png");
+  background-image: url("../../assets/maplanding.svg");
   background-position: 50% 80%;
   background-repeat: no-repeat;
   background-size: contain;

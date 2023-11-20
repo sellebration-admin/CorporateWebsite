@@ -1,0 +1,218 @@
+.new-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.parent {
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+}
+
+.new-header-active {
+  background-color: #2f528e;
+  height: 90px;
+  flex-direction: column;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+.new-header-showmenu {
+  flex-direction: column;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #2f528e;
+}
+
+.new-header-showmenu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(https://sellebration-main-web-git-master-host-sellebration.vercel.app/static/media/backimg.c405bb3a31f98c7b770f.png)
+    repeat;
+  background-color: #2f528e;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.nheader-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+
+.nheader-logo {
+  width: 90px;
+  height: 90px;
+}
+
+.nheader-links {
+  display: flex;
+  align-items: center;
+}
+.nheader-search-form {
+  display: flex;
+  border-radius: 30px;
+  position: relative;
+  width: 255px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: white;
+}
+
+button[type="submit"] {
+  position: absolute;
+  background: transparent;
+  border: none;
+  top: 4px;
+  right: 25px;
+  cursor: pointer;
+}
+.nheader-search-input {
+  width: 195px;
+  border-radius: 30px;
+  border: none;
+  text-indent: 39px;
+  font-size: 16px;
+  color: var(--search-placeholder);
+  overflow: hidden;
+  height: 30px;
+}
+
+.nheader-sort-icon-wrapper {
+  cursor: pointer;
+}
+.nheader-sort-icon-wrapper:hover {
+  transform: scale(1.2);
+}
+
+.nheader-close-icon {
+  color: black;
+  z-index: 3;
+}
+
+.nheader-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  top: 60px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.nheader-menu-columns {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  padding-top: 50px;
+  position: relative;
+}
+.nheader-menu-column {
+  padding: 20px;
+  padding-right: 80px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.nheader-vertical-line {
+  border: 2px solid white;
+  height: 40vh;
+  width: 2px;
+  margin-top: 20px;
+}
+
+.nheader-menu-column a {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.nheader-horizontal-line {
+  border: 1px solid white;
+  margin-bottom: 20px;
+}
+
+.nheader-search-input:focus {
+  outline: none;
+}
+
+.nheader-selectdiv select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  width: 60%;
+  height: 30px;
+  cursor: pointer;
+  border: 1.5px solid white;
+  border-radius: 30px;
+  color: white;
+  margin-left: 15px;
+  padding-left: 15px;
+}
+
+select:focus {
+  outline: none;
+}
+
+select option {
+  background-color: white;
+  color: black;
+}
+
+.nheader-selectdiv {
+  position: relative;
+  min-width: 150px;
+}
+
+.nheader-selectdiv select::-ms-expand {
+  display: none;
+}
+
+.nheader-selectdiv:after {
+  content: ">";
+  font: 17px "Consolas", monospace;
+  color: #ffffff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 56px;
+  top: 4px;
+  padding: 0 0 2px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.nheader-links {
+  line-height: 20px;
+  align-items: center;
+}
+
+.nheader-sort-logo {
+  margin-right: 39px;
+  width: 26px;
+  height: 26px;
+}
+
+.nheader-close-icon {
+  margin-right: 39px;
+  width: 20px;
+  height: 20px;
+}
+
+.nheader-logo-image {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  padding: 10px;
+}

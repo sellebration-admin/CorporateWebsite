@@ -12,7 +12,7 @@ const LanguageChoosingPage = () => {
   const getButtonText = () => {
     switch (selectedLanguage) {
       case "English":
-        return "Proceed";
+        return "PROCEED";
       case "हिन्दी":
         return "आगे बढ़ें";
       case "deutsch":
@@ -84,32 +84,32 @@ const LanguageChoosingPage = () => {
           </marquee>
         </div>
         <div className="background-map-holder">
-        <div className="language-selector">
-          <div className="selector-container">
-            <select
-              name="languages"
-              id="languages"
-              value={selectedLanguage}
-              onChange={handleLanguageChange}
-            >
-              <option value="English">English</option>
-              <option value="हिन्दी">हिन्दी</option>
-              <option value="deutsch">Deutsch</option>
-              <option value="français">Français</option>
-              <option value="русский">Русский</option>
-              <option value="Português">Português</option>
-              <option value="中国人">中国人</option>
-              <option value="español">Español</option>
-              <option value="日本">日本</option>
-            </select>
-            <br />
-            <br />
+          <div className="language-selector">
+            <div className="selector-container">
+              <select
+                name="languages"
+                id="languages"
+                value={selectedLanguage}
+                onChange={handleLanguageChange}
+              >
+                <option value="English">English</option>
+                <option value="हिन्दी">हिन्दी</option>
+                <option value="deutsch">Deutsch</option>
+                <option value="français">Français</option>
+                <option value="русский">Русский</option>
+                <option value="Português">Português</option>
+                <option value="中国人">中国人</option>
+                <option value="español">Español</option>
+                <option value="日本">日本</option>
+              </select>
+              <br />
+              <br />
+            </div>
+            <div className="button-div">
+              <button onClick={handleProceed}>{getButtonText()}</button>
+            </div>
           </div>
-          <div className="button-div">
-            <button onClick={handleProceed}>{getButtonText()}</button>
-          </div>
-          </div>
-          </div>
+        </div>
       </div>
     </div>
   );

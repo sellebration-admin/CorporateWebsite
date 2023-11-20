@@ -6,10 +6,11 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import LanguagesMap from "../../components/LanguagesMap/LanguagesMap";
 import "./HomePage.css";
+import NewHeader from "../../components/Header/NewHeader";
 const HomePage = () => {
   return (
     <div className="homepage-wrapper">
-      <Header />
+      <NewHeader />
       <LanguagesMap />
       <OurStories />
       <LatestNews />

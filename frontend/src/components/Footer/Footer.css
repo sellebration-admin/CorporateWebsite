@@ -12,9 +12,9 @@ footer {
 }
 
 .lines {
-  width: 80%;
-  max-width: 80%;
-  max-width: 1244px;
+  width: 100%;
+  /* max-width: 80%;
+  max-width: 1244px; */
 }
 .first-line {
   display: flex;
@@ -35,7 +35,7 @@ footer {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: 20px; /* 100% */
+  line-height: 20px; 
   text-transform: capitalize;
 }
 

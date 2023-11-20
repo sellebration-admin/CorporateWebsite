@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./Header.css";
 import {
   twitterFooter,
@@ -14,13 +14,27 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const { currentUser, logout } = useContext(AuthContext);
+  const [active, setActive] = useState(false);
   const toggleMenu = () => {
     setShowMenu(!showMenu);
     console.log("Clickedf");
   };
 
+  const isActive = () => {
+    window.scrollY > 0 ? setActive(true) : setActive(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", isActive);
+    console.log("Scrolling");
+    return () => {
+      window.removeEventListener("scroll", isActive);
+      console.log("Stop sc");
+    };
+  }, []);
+
   return (
-    <header>
+    <div className={`header-main ${active ? "scrolled" : ""}`}>
       <div className="wrapper">
         <div className="container">
           <div className="left-column">
@@ -147,7 +161,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 

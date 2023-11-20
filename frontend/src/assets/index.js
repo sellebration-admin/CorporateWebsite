@@ -14,6 +14,9 @@ import youtubeFooter from "./youtubefooter.png";
 import doneIcon from "./doneIcon.png";
 import failIcon from "./failIcon.png";
 import navbarbg from "./backimg.c405bb3a31f98c7b770f.png";
+import nblogo from "./nblogo.svg";
+import closeIcon from "./vectorclose.png";
+import whiteLogo from "./logologo.png";
 export {
   map,
   logo,
@@ -31,4 +34,7 @@ export {
   doneIcon,
   failIcon,
   navbarbg,
+  nblogo,
+  closeIcon,
+  whiteLogo,
 };
