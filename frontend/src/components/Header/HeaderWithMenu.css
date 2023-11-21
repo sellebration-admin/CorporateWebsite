@@ -1,0 +1,14 @@
+.nheader-sort-logo-wm {
+  padding: 7px;
+  height: 41px;
+  margin-right: 10px;
+}
+
+.nheader-logo-image-white-wm {
+  width: 90%;
+  height: 6rem;
+  background-color: transparent;
+  margin-left: 80px;
+  transition: 0.4s;
+  margin-top: 20px;
+}

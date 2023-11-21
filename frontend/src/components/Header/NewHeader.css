@@ -2,13 +2,19 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background: linear-gradient(
+    0deg,
+    rgba(9, 9, 121, 0) 35%,
+    rgba(47, 49, 50, 1) 100%
+  );
 }
 
 .parent {
   width: 100%;
   position: fixed;
   z-index: 3;
+  height: 7rem;
 }
 
 .new-header-active {
@@ -35,10 +41,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(https://sellebration-main-web-git-master-host-sellebration.vercel.app/static/media/backimg.c405bb3a31f98c7b770f.png)
-    repeat;
   background-color: #2f528e;
-  opacity: 0.2;
+  background-image: url("./../../assets/bluebg.svg");
   z-index: -1;
 }
 
@@ -46,12 +50,11 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 20px 0px;
 }
 
 .nheader-logo {
-  width: 90px;
-  height: 90px;
+  width: 7rem;
+  height: 90%;
 }
 
 .nheader-links {
@@ -100,29 +103,30 @@ button[type="submit"] {
 }
 
 .nheader-menu {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-
   top: 60px;
-  height: auto;
-  margin: 0 auto;
+  height: auto;*/
+  /* margin: 0 auto; */
 }
 
 .nheader-menu-columns {
   display: flex;
-  width: 80%;
-  height: 100%;
-  padding-top: 50px;
-  position: relative;
+  width: 100%;
+  height: 28rem;
+  justify-content: space-between;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 .nheader-menu-column {
-  padding: 20px;
-  padding-right: 80px;
   color: white;
   display: flex;
   flex-direction: column;
+}
+.nheader-menu-column h1 {
+  font-size: 32px;
 }
 .nheader-vertical-line {
   border: 2px solid white;
@@ -137,9 +141,12 @@ button[type="submit"] {
   margin-bottom: 10px;
 }
 
+.nheader-menu-column Link {
+  font-size: 18px;
+}
 .nheader-horizontal-line {
   border: 1px solid white;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .nheader-search-input:focus {
@@ -211,19 +218,19 @@ select option {
 }
 
 .nheader-logo-image-white {
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: 4rem;
   background-color: transparent;
-  padding: 10px;
-  margin-left: 50px;
+  margin-left: 80px;
+  transition: 0.4s;
 }
 
 .nheader-logo-image-black {
   width: 100%;
-  height: 100%;
+  height: 7rem;
   background-color: transparent;
-  padding: 10px;
-  margin-left: 50px;
+  transition: 0.4s;
+  margin-left: 80px;
 }
 
 @media only screen and (max-width: 415px) {
@@ -239,9 +246,13 @@ select option {
     margin-bottom: 150px;
   }
 
+  .nheader-vertical-line {
+    display: none;
+  }
   .nheader-menu-columns {
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
   .nheader-menu-column {
     border: 2px solid white;

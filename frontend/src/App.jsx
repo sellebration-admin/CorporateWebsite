@@ -12,6 +12,7 @@ import AdminPanelPage from "./pages/AdminPanelPage/AdminPanelPage";
 import Register from "./pages/Register/Register";
 import { AuthContextProvider } from "./context/authContext";
 import TestPage from "./pages/TestPage/TestPage";
+import { MenuContextProvider } from "./context/menuContext";
 const App = () => {
   const Layout = () => {
     return (
@@ -66,9 +67,11 @@ const App = () => {
   ]);
   return (
     <div>
-      <AuthContextProvider>
-        <RouterProvider router={router} />
-      </AuthContextProvider>
+      <MenuContextProvider>
+        <AuthContextProvider>
+          <RouterProvider router={router} />
+        </AuthContextProvider>
+      </MenuContextProvider>
     </div>
   );
 };

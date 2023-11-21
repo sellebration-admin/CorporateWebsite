@@ -17,6 +17,7 @@ import navbarbg from "./backimg.c405bb3a31f98c7b770f.png";
 import nblogo from "./nblogo.svg";
 import closeIcon from "./vectorclose.png";
 import whiteLogo from "./logologo.png";
+import logotwo from "./logo222.svg";
 export {
   map,
   logo,
@@ -37,4 +38,5 @@ export {
   nblogo,
   closeIcon,
   whiteLogo,
+  logotwo,
 };
